@@ -5,7 +5,9 @@ interface Props {
 }
 
 const { title, description = "Pusho - L'app per contare i tuoi push-up con l'intelligenza artificiale" } = Astro.props;
-const base = import.meta.env.BASE_URL;
+// Ensure base URL ends with a slash for proper path concatenation
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 ---
 
 <!doctype html>
