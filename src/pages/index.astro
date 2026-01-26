@@ -591,6 +591,7 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
     .hero {
       min-height: calc(100vh - 75px);
       padding: 20px 0;
+      overflow: visible;
     }
 
     .hero-grid {
@@ -613,6 +614,22 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 
     .cta-buttons {
       justify-content: center;
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+
+    .btn-store {
+      padding: 10px 14px;
+      font-size: 0.85rem;
+    }
+
+    .btn-store svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-store .btn-label {
+      display: none;
     }
 
     .hero-visual {
@@ -646,10 +663,18 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
       font-size: 1.75rem;
     }
 
-    .brand-el-1,
+    .brand-el-1 {
+      width: 120px;
+      top: 15%;
+      left: -60px;
+      opacity: 0.85;
+    }
+
     .brand-el-2 {
-      width: 220px;
-      opacity: 0.6;
+      width: 120px;
+      bottom: 25%;
+      right: -60px;
+      opacity: 0.85;
     }
 
     .brand-el-cta-1,

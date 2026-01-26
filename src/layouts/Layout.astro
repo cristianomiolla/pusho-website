@@ -197,6 +197,7 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -208,6 +209,9 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
     display: flex;
     flex-direction: column;
     font-weight: 400;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   h1, h2, h3 {
@@ -477,7 +481,7 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
     .nav-links {
       position: fixed;
       top: 0;
-      right: -100%;
+      right: 0;
       width: 280px;
       height: 100vh;
       background: var(--color-bg-card);
@@ -486,12 +490,15 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
       padding: 100px 32px 32px;
       gap: 0;
       box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
-      transition: right 0.3s ease;
+      transition: transform 0.3s ease, visibility 0.3s ease;
       z-index: 1000;
+      transform: translateX(100%);
+      visibility: hidden;
     }
 
     .nav-links.open {
-      right: 0;
+      transform: translateX(0);
+      visibility: visible;
     }
 
     .nav-links > a {
