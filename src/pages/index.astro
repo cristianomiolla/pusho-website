@@ -5,6 +5,9 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Home">
   <!-- Hero Section -->
   <section class="hero">
+    <!-- Brand Elements -->
+    <img src="/brandelement1.svg" alt="" class="brand-element brand-el-1" />
+    <img src="/brandelement2.svg" alt="" class="brand-element brand-el-2" />
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="hero-badge">
@@ -150,6 +153,9 @@ import Layout from '../layouts/Layout.astro';
   <section class="cta-section">
     <div class="container">
       <div class="cta-card">
+        <!-- Brand Elements -->
+        <img src="/brandelement1.svg" alt="" class="brand-element brand-el-cta-1" />
+        <img src="/brandelement2.svg" alt="" class="brand-element brand-el-cta-2" />
         <h2>Pronto a iniziare?</h2>
         <p>Scarica Pusho gratis e scopri un nuovo modo di allenarti.</p>
         <div class="cta-buttons">
@@ -161,6 +167,44 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style is:global>
+  /* Brand Elements */
+  .brand-element {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: 0;
+  }
+
+  .brand-el-1 {
+    top: 15%;
+    left: -18%;
+    width: 350px;
+    transform: rotate(-15deg);
+  }
+
+  .brand-el-2 {
+    bottom: 10%;
+    right: -10%;
+    width: 320px;
+    transform: rotate(20deg);
+  }
+
+  .brand-el-cta-1 {
+    top: -20%;
+    left: -10%;
+    width: 280px;
+    transform: rotate(10deg);
+    opacity: 0.7;
+  }
+
+  .brand-el-cta-2 {
+    bottom: -20%;
+    right: -8%;
+    width: 250px;
+    transform: rotate(-25deg);
+    opacity: 0.7;
+  }
+
   /* Hero Section */
   .hero {
     min-height: calc(100vh - 75px); /* 100vh minus navbar height */
@@ -597,6 +641,18 @@ import Layout from '../layouts/Layout.astro';
 
     .cta-card h2 {
       font-size: 1.75rem;
+    }
+
+    .brand-el-1,
+    .brand-el-2 {
+      width: 220px;
+      opacity: 0.6;
+    }
+
+    .brand-el-cta-1,
+    .brand-el-cta-2 {
+      width: 180px;
+      opacity: 0.5;
     }
   }
 </style>
