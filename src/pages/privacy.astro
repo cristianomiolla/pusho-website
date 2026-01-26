@@ -375,8 +375,14 @@ import Layout from '../layouts/Layout.astro';
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
 
-  a {
-    color: var(--color-accent);
+  .legal-content a:not(.contact-link) {
+    color: #1a8a7a;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-content a:not(.contact-link):hover {
+    color: #0d5c50;
   }
 
   @media (max-width: 768px) {
