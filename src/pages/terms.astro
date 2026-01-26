@@ -378,6 +378,21 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-accent);
   }
 
+  /* Inline email links within paragraphs */
+  p a[href^="mailto:"] {
+    color: var(--color-bg-dark);
+    background: var(--color-accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  p a[href^="mailto:"]:hover {
+    opacity: 0.85;
+  }
+
   .footer-note {
     background: rgba(var(--color-accent-rgb), 0.1);
     border-radius: var(--radius-md);
