@@ -1,0 +1,268 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Pusho - L'app per contare i tuoi push-up con l'intelligenza artificiale" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{title} | Pusho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="/logo.png" alt="Pusho" class="logo-img" />
+          <span>PUSHO</span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/support">Supporto</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Termini</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="/" class="logo">
+              <img src="/logo.png" alt="Pusho" class="logo-img" />
+              <span>PUSHO</span>
+            </a>
+            <p>Il tuo fitness tracker intelligente</p>
+          </div>
+          <div class="footer-links">
+            <a href="/support">Supporto</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Termini e Condizioni</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Pusho. Tutti i diritti riservati.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Brand Colors - from app */
+    --color-accent: #BDEEE7;
+    --color-accent-rgb: 189, 238, 231;
+
+    /* Light theme base */
+    --color-bg: #F5F5F7;
+    --color-bg-card: #FFFFFF;
+    --color-bg-dark: #1A1A1A;
+    --color-bg-modal: #1C1C1E;
+
+    /* Text */
+    --color-text: #1A1A1A;
+    --color-text-secondary: #666666;
+    --color-text-light: #FFFFFF;
+
+    /* Borders & Effects */
+    --color-border: rgba(189, 238, 231, 0.3);
+    --shadow-accent: 0 6px 24px rgba(189, 238, 231, 0.4);
+    --shadow-card: 0 4px 16px rgba(189, 238, 231, 0.25);
+
+    /* Radius - from app */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    /* Fonts */
+    --font-heading: 'Agdasima', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 12px 0;
+    background: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-bg-dark);
+    letter-spacing: 3px;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 11px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .nav-links a {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 8px 0;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-text);
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: auto;
+    padding: 48px 0 24px;
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .footer-brand .logo {
+    color: var(--color-accent);
+  }
+
+  .footer-brand p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-accent);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 1.5rem;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+</style>

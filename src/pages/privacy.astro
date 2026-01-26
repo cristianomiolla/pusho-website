@@ -1,0 +1,397 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Privacy Policy" description="Privacy Policy di Pusho - Come trattiamo i tuoi dati">
+  <article class="legal-page">
+    <div class="container">
+      <div class="legal-header">
+        <span class="legal-tag">Documento legale</span>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Ultimo aggiornamento: 21 gennaio 2026</p>
+      </div>
+
+      <div class="legal-content">
+        <section>
+          <p class="intro">
+            Benvenuto in Pusho! La presente Privacy Policy descrive come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali quando utilizzi la nostra applicazione mobile per il tracciamento dei push-up.
+          </p>
+        </section>
+
+        <section>
+          <h2>1. Titolare del Trattamento</h2>
+          <p>
+            Il titolare del trattamento dei dati è raggiungibile all'indirizzo email:
+          </p>
+          <a href="mailto:pushoapp@gmail.com" class="contact-link">pushoapp@gmail.com</a>
+        </section>
+
+        <section>
+          <h2>2. Dati Raccolti</h2>
+
+          <h3>2.1 Dati di Registrazione (Obbligatori)</h3>
+          <p>Per creare un account Pusho, raccogliamo:</p>
+          <ul>
+            <li><strong>Indirizzo email</strong> - Per l'autenticazione e le comunicazioni relative all'account</li>
+            <li><strong>Password</strong> - Memorizzata in forma criptata (hash)</li>
+            <li><strong>Nickname</strong> - Nome utente univoco visualizzato nella community (3-20 caratteri)</li>
+          </ul>
+
+          <h3>2.2 Dati del Profilo (Opzionali)</h3>
+          <p>Puoi scegliere di fornire:</p>
+          <ul>
+            <li><strong>Località</strong> - Città, regione e paese</li>
+            <li><strong>Coordinate geografiche</strong> - Latitudine e longitudine (inserite manualmente)</li>
+            <li><strong>URL avatar</strong> - Link a un'immagine profilo</li>
+          </ul>
+
+          <h3>2.3 Dati di Allenamento (Raccolti Automaticamente)</h3>
+          <p>Durante l'utilizzo dell'app, raccogliamo:</p>
+          <ul>
+            <li><strong>Conteggio push-up</strong> - Numero di ripetizioni per sessione</li>
+            <li><strong>Durata sessione</strong> - Tempo trascorso in allenamento</li>
+            <li><strong>Punteggio qualità</strong> - Valutazione della postura (0-100%)</li>
+            <li><strong>Dettagli set</strong> - Ripetizioni, qualità e durata per ogni set</li>
+            <li><strong>Schede allenamento</strong> - Template di workout utilizzati o creati</li>
+            <li><strong>Timestamp</strong> - Data e ora di ogni sessione</li>
+          </ul>
+
+          <h3>2.4 Statistiche Aggregate</h3>
+          <p>Calcoliamo e memorizziamo:</p>
+          <ul>
+            <li>Totale push-up cumulativi</li>
+            <li>Numero totale di sessioni</li>
+            <li>Record personale (massimo in un singolo set)</li>
+            <li>Qualità media</li>
+            <li>Tempo totale sotto tensione</li>
+          </ul>
+
+          <h3>2.5 Dati NON Raccolti</h3>
+          <div class="highlight-box">
+            <strong>Importante:</strong> Pusho NON raccoglie:
+            <ul>
+              <li>Video o immagini delle tue sessioni di allenamento</li>
+              <li>Dati GPS automatici (la localizzazione è solo manuale)</li>
+              <li>Contatti, calendario o file del dispositivo</li>
+              <li>Identificatori pubblicitari (IDFA/GAID)</li>
+              <li>Dati audio o registrazioni vocali</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>3. Come Utilizziamo i Tuoi Dati</h2>
+          <p>Utilizziamo i dati raccolti per:</p>
+          <ul>
+            <li>Fornire le funzionalità dell'app (Esecuzione contratto)</li>
+            <li>Autenticazione e sicurezza account (Esecuzione contratto)</li>
+            <li>Visualizzare le classifiche community (Legittimo interesse)</li>
+            <li>Gestire le challenge comunitarie (Legittimo interesse)</li>
+            <li>Calcolare statistiche e progressi (Esecuzione contratto)</li>
+            <li>Migliorare l'applicazione (Legittimo interesse)</li>
+            <li>Comunicazioni relative all'account (Esecuzione contratto)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Elaborazione On-Device (Fotocamera)</h2>
+          <div class="highlight-box">
+            <p>
+              Pusho utilizza la fotocamera del dispositivo per contare i push-up attraverso il rilevamento della postura. Questo processo:
+            </p>
+            <ul>
+              <li>Avviene <strong>interamente sul tuo dispositivo</strong> (on-device)</li>
+              <li>Utilizza la tecnologia MediaPipe Pose di Google</li>
+              <li><strong>NON registra</strong> video o immagini</li>
+              <li><strong>NON invia</strong> frame video a server esterni</li>
+              <li>Elabora i fotogrammi in tempo reale nella memoria del dispositivo</li>
+            </ul>
+            <p>
+              Utilizziamo MediaPipe Pose, una libreria open-source di Google distribuita sotto licenza Apache 2.0. Questa tecnologia rileva i punti chiave del corpo (landmark) per determinare la posizione durante l'esercizio.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>5. Condivisione dei Dati</h2>
+
+          <h3>Dati visibili alla community:</h3>
+          <ul>
+            <li>Nickname, badge principale, località (se inserita)</li>
+            <li>Numero di push-up (giornalieri, settimanali, mensili)</li>
+            <li>Posizione in classifica, partecipazione alle challenge</li>
+          </ul>
+
+          <h3>Fornitori di servizi:</h3>
+          <ul>
+            <li><strong>Supabase Inc.</strong> - Database e autenticazione (tutti i dati account e allenamento)</li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>NON</strong> vendiamo i tuoi dati a terze parti.<br>
+            <strong>NON</strong> condividiamo dati con network pubblicitari.<br>
+            <strong>NON</strong> utilizziamo servizi di analytics di terze parti.
+          </div>
+        </section>
+
+        <section>
+          <h2>6. Trasferimenti Internazionali</h2>
+          <p>
+            I tuoi dati potrebbero essere trasferiti e conservati su server situati al di fuori del tuo paese di residenza, inclusi gli Stati Uniti, dove Supabase mantiene la propria infrastruttura.
+          </p>
+          <p>
+            Questi trasferimenti avvengono nel rispetto delle normative applicabili sulla protezione dei dati, incluse le Clausole Contrattuali Standard dell'UE ove necessario.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Conservazione dei Dati</h2>
+          <ul>
+            <li><strong>Dati account</strong> - Fino alla cancellazione dell'account</li>
+            <li><strong>Dati allenamento</strong> - Fino alla cancellazione dell'account</li>
+            <li><strong>Statistiche</strong> - Fino alla cancellazione dell'account</li>
+            <li><strong>Token di sessione</strong> - Fino al logout o scadenza</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>8. Sicurezza</h2>
+          <p>Adottiamo misure tecniche e organizzative per proteggere i tuoi dati:</p>
+          <ul>
+            <li><strong>Crittografia in transito</strong> - Tutte le comunicazioni avvengono tramite HTTPS/TLS</li>
+            <li><strong>Password hash</strong> - Le password sono memorizzate in forma criptata irreversibile</li>
+            <li><strong>Token di sessione</strong> - Autenticazione sicura con token a scadenza</li>
+            <li><strong>Accesso limitato</strong> - I dati sono accessibili solo tramite API autenticate</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>9. I Tuoi Diritti (GDPR)</h2>
+          <p>Se risiedi nell'Unione Europea, hai i seguenti diritti:</p>
+          <ul>
+            <li><strong>Accesso</strong> - Richiedere una copia dei tuoi dati personali</li>
+            <li><strong>Rettifica</strong> - Correggere dati inesatti o incompleti</li>
+            <li><strong>Cancellazione</strong> - Richiedere l'eliminazione dei tuoi dati</li>
+            <li><strong>Limitazione</strong> - Limitare il trattamento dei tuoi dati</li>
+            <li><strong>Portabilità</strong> - Ricevere i tuoi dati in formato strutturato</li>
+            <li><strong>Opposizione</strong> - Opporti al trattamento per motivi legittimi</li>
+          </ul>
+          <p>
+            Per esercitare i tuoi diritti, contattaci all'indirizzo: <a href="mailto:pushoapp@gmail.com">pushoapp@gmail.com</a>
+          </p>
+          <p>Risponderemo entro 30 giorni dalla ricezione della richiesta.</p>
+        </section>
+
+        <section>
+          <h2>10. Cancellazione Account</h2>
+          <p>Per richiedere la cancellazione del tuo account e di tutti i dati associati:</p>
+          <ol>
+            <li>Invia un'email a <a href="mailto:pushoapp@gmail.com">pushoapp@gmail.com</a></li>
+            <li>Specifica l'indirizzo email associato all'account</li>
+            <li>Indica "Richiesta cancellazione account" come oggetto</li>
+          </ol>
+          <p>Procederemo alla cancellazione entro 30 giorni dalla verifica dell'identità.</p>
+        </section>
+
+        <section>
+          <h2>11. Minori</h2>
+          <p>
+            Pusho non è destinato a utenti di età inferiore ai 16 anni. Non raccogliamo consapevolmente dati personali di minori. Se sei un genitore o tutore e ritieni che tuo figlio ci abbia fornito dati personali, contattaci per richiederne la rimozione.
+          </p>
+        </section>
+
+        <section>
+          <h2>12. Permessi dell'App</h2>
+          <p>Pusho richiede i seguenti permessi:</p>
+          <ul>
+            <li><strong>Fotocamera (iOS/Android)</strong> - Rilevamento pose per conteggio push-up</li>
+            <li><strong>Internet (iOS/Android)</strong> - Sincronizzazione dati con il server</li>
+            <li><strong>Vibrazione (Android)</strong> - Feedback aptico durante l'allenamento</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>13. Cookie e Tracciamento</h2>
+          <p>Pusho <strong>NON</strong> utilizza:</p>
+          <ul>
+            <li>Cookie</li>
+            <li>Pixel di tracciamento</li>
+            <li>SDK di analytics (Google Analytics, Firebase Analytics, etc.)</li>
+            <li>Identificatori pubblicitari</li>
+            <li>Fingerprinting del dispositivo</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>14. Modifiche alla Privacy Policy</h2>
+          <p>Potremmo aggiornare questa Privacy Policy periodicamente. In caso di modifiche sostanziali:</p>
+          <ul>
+            <li>Aggiorneremo la data "Ultimo aggiornamento" in cima al documento</li>
+            <li>Ti informeremo tramite notifica nell'app o via email</li>
+            <li>Il proseguimento dell'uso dell'app dopo le modifiche costituisce accettazione</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>15. Contatti</h2>
+          <p>Per domande, richieste o reclami relativi a questa Privacy Policy:</p>
+          <a href="mailto:pushoapp@gmail.com" class="contact-link">pushoapp@gmail.com</a>
+        </section>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .legal-page {
+    padding: 60px 0 100px;
+  }
+
+  .legal-header {
+    margin-bottom: 48px;
+  }
+
+  .legal-tag {
+    display: inline-block;
+    background: rgba(var(--color-accent-rgb), 0.4);
+    color: var(--color-text);
+    padding: 6px 16px;
+    border-radius: var(--radius-lg);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .legal-header h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .last-updated {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+  }
+
+  .legal-content {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-text);
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: var(--color-text);
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+
+  ul, ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+    color: var(--color-text-secondary);
+  }
+
+  li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  li strong {
+    color: var(--color-text);
+  }
+
+  .highlight-box {
+    background: rgba(var(--color-accent-rgb), 0.1);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.3);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 16px 0;
+  }
+
+  .highlight-box strong {
+    color: var(--color-text);
+  }
+
+  .highlight-box p {
+    margin-bottom: 12px;
+  }
+
+  .highlight-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .highlight-box ul {
+    margin-bottom: 0;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  a {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .legal-page {
+      padding: 40px 0 60px;
+    }
+
+    .legal-header h1 {
+      font-size: 2rem;
+    }
+
+    .legal-content {
+      padding: 32px 24px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+</style>
