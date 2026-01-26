@@ -6,9 +6,9 @@ import Layout from '../layouts/Layout.astro';
   <article class="support-page">
     <div class="container">
       <div class="support-header">
-        <span class="support-tag">Assistenza</span>
-        <h1>Supporto</h1>
-        <p class="support-intro">Hai bisogno di aiuto? Siamo qui per te.</p>
+        <span class="support-tag" data-i18n="support.tag">Assistenza</span>
+        <h1 data-i18n="support.title">Supporto</h1>
+        <p class="support-intro" data-i18n="support.intro">Hai bisogno di aiuto? Siamo qui per te.</p>
       </div>
 
       <!-- Contact Section -->
@@ -20,16 +20,16 @@ import Layout from '../layouts/Layout.astro';
               <polyline points="22,6 12,13 2,6"/>
             </svg>
           </div>
-          <h2>Contattaci</h2>
-          <p>Per domande, feedback o problemi tecnici, scrivici a:</p>
+          <h2 data-i18n="support.contactTitle">Contattaci</h2>
+          <p data-i18n="support.contactDesc">Per domande, feedback o problemi tecnici, scrivici a:</p>
           <a href="mailto:pushoapp@gmail.com" class="contact-link">pushoapp@gmail.com</a>
-          <p class="response-time">Rispondiamo generalmente entro 48 ore.</p>
+          <p class="response-time" data-i18n="support.responseTime">Rispondiamo generalmente entro 48 ore.</p>
         </div>
       </div>
 
       <!-- FAQ Section -->
       <div class="faq-section">
-        <h2 class="faq-title">Domande Frequenti</h2>
+        <h2 class="faq-title" data-i18n="support.faqTitle">Domande Frequenti</h2>
 
         <div class="faq-grid">
           <div class="faq-card">
@@ -39,8 +39,8 @@ import Layout from '../layouts/Layout.astro';
                 <circle cx="12" cy="13" r="4"/>
               </svg>
             </div>
-            <h3>Perche l'app richiede l'accesso alla fotocamera?</h3>
-            <p>Pusho utilizza la fotocamera frontale per rilevare la posizione del tuo corpo e contare automaticamente i push-up. Nessuna immagine o video viene salvato o inviato da nessuna parte.</p>
+            <h3 data-i18n="support.faq1Title">Perche l'app richiede l'accesso alla fotocamera?</h3>
+            <p data-i18n="support.faq1Desc">Pusho utilizza la fotocamera frontale per rilevare la posizione del tuo corpo e contare automaticamente i push-up. Nessuna immagine o video viene salvato o inviato da nessuna parte.</p>
           </div>
 
           <div class="faq-card">
@@ -51,8 +51,8 @@ import Layout from '../layouts/Layout.astro';
                 <line x1="12" y1="16" x2="12.01" y2="16"/>
               </svg>
             </div>
-            <h3>L'app e gratuita?</h3>
-            <p>Si, Pusho e completamente gratuita. Tutte le funzionalita sono disponibili senza costi nascosti o abbonamenti.</p>
+            <h3 data-i18n="support.faq2Title">L'app e gratuita?</h3>
+            <p data-i18n="support.faq2Desc">Si, Pusho e completamente gratuita. Tutte le funzionalita sono disponibili senza costi nascosti o abbonamenti.</p>
           </div>
 
           <div class="faq-card">
@@ -62,8 +62,8 @@ import Layout from '../layouts/Layout.astro';
                 <polyline points="22,4 12,14.01 9,11.01"/>
               </svg>
             </div>
-            <h3>I miei push-up non vengono contati correttamente</h3>
-            <p>Assicurati di essere in una stanza ben illuminata e che la parte superiore del tuo corpo sia completamente visibile nell'inquadratura della fotocamera. Posiziona il telefono a circa 1-2 metri di distanza.</p>
+            <h3 data-i18n="support.faq3Title">I miei push-up non vengono contati correttamente</h3>
+            <p data-i18n="support.faq3Desc">Assicurati di essere in una stanza ben illuminata e che la parte superiore del tuo corpo sia completamente visibile nell'inquadratura della fotocamera. Posiziona il telefono a circa 1-2 metri di distanza.</p>
           </div>
 
           <div class="faq-card">
@@ -73,8 +73,8 @@ import Layout from '../layouts/Layout.astro';
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
             </div>
-            <h3>I miei dati sono al sicuro?</h3>
-            <p>Assolutamente si. L'elaborazione video avviene interamente sul tuo dispositivo. Non registriamo ne inviamo video ai nostri server. I tuoi dati di allenamento sono protetti e criptati.</p>
+            <h3 data-i18n="support.faq4Title">I miei dati sono al sicuro?</h3>
+            <p data-i18n="support.faq4Desc">Assolutamente si. L'elaborazione video avviene interamente sul tuo dispositivo. Non registriamo ne inviamo video ai nostri server. I tuoi dati di allenamento sono protetti e criptati.</p>
           </div>
 
           <div class="faq-card">
@@ -86,8 +86,8 @@ import Layout from '../layouts/Layout.astro';
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <h3>Come funziona la classifica?</h3>
-            <p>La classifica mostra i push-up totali degli utenti della community. Puoi filtrare per periodo (giornaliero, settimanale, mensile) e vedere la tua posizione rispetto agli altri.</p>
+            <h3 data-i18n="support.faq5Title">Come funziona la classifica?</h3>
+            <p data-i18n="support.faq5Desc">La classifica mostra i push-up totali degli utenti della community. Puoi filtrare per periodo (giornaliero, settimanale, mensile) e vedere la tua posizione rispetto agli altri.</p>
           </div>
 
           <div class="faq-card">
@@ -98,16 +98,16 @@ import Layout from '../layouts/Layout.astro';
                 <line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
             </div>
-            <h3>Dove posso scaricare l'app?</h3>
-            <p>Pusho e disponibile su App Store per iPhone e Google Play per dispositivi Android. Cerca "Pusho" o usa i link nella homepage.</p>
+            <h3 data-i18n="support.faq6Title">Dove posso scaricare l'app?</h3>
+            <p data-i18n="support.faq6Desc">Pusho e disponibile su App Store per iPhone e Google Play per dispositivi Android. Cerca "Pusho" o usa i link nella homepage.</p>
           </div>
         </div>
       </div>
 
       <!-- About Section -->
       <div class="about-section">
-        <h2>Cos'e Pusho?</h2>
-        <p>
+        <h2 data-i18n="support.aboutTitle">Cos'e Pusho?</h2>
+        <p data-i18n="support.aboutDesc">
           Pusho e un'app fitness che conta i tuoi push-up in tempo reale usando la fotocamera del dispositivo e il rilevamento della postura basato sull'intelligenza artificiale. Nessun accessorio richiesto, solo tu e il tuo telefono.
         </p>
       </div>

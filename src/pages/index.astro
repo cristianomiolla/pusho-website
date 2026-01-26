@@ -15,10 +15,10 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          Powered by AI
+          <span data-i18n="home.badge">Powered by AI</span>
         </div>
-        <h1>Il tuo fitness tracker<br/><span class="highlight">intelligente</span></h1>
-        <p class="subtitle">
+        <h1><span data-i18n="home.title">Il tuo fitness tracker</span><br/><span class="highlight" data-i18n="home.titleHighlight">intelligente</span></h1>
+        <p class="subtitle" data-i18n="home.subtitle">
           Pusho ti guida in ogni allenamento, corregge la tua tecnica in tempo reale
           e ti connette con una community di atleti motivati come te.
         </p>
@@ -27,19 +27,19 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
-            <span class="btn-text"><span class="btn-label">Scarica su</span><span class="btn-store-name">App Store</span></span>
+            <span class="btn-text"><span class="btn-label" data-i18n="home.downloadOn">Scarica su</span><span class="btn-store-name">App Store</span></span>
           </a>
           <a href="https://play.google.com/store/apps/details?id=com.pusho.app" class="btn btn-store">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
             </svg>
-            <span class="btn-text"><span class="btn-label">Scarica su</span><span class="btn-store-name">Google Play</span></span>
+            <span class="btn-text"><span class="btn-label" data-i18n="home.downloadOn">Scarica su</span><span class="btn-store-name">Google Play</span></span>
           </a>
         </div>
       </div>
       <div class="hero-visual">
         <div class="phone-mockup">
-          <img src={`${base}mockup.png`} alt="Pusho app screenshot" class="mockup-image" />
+          <img src={`${base}mockup.png`} alt="Pusho app screenshot" class="mockup-image" data-mockup-it={`${base}mockup.png`} data-mockup-en={`${base}mockup-en.png`} />
         </div>
       </div>
     </div>
@@ -49,9 +49,9 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   <section class="features">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Funzionalita</span>
-        <h2>Allenati meglio, insieme</h2>
-        <p>Strumenti intelligenti e una community che ti spinge a dare il massimo</p>
+        <span class="section-tag" data-i18n="home.featuresTag">Funzionalita</span>
+        <h2 data-i18n="home.featuresTitle">Allenati meglio, insieme</h2>
+        <p data-i18n="home.featuresSubtitle">Strumenti intelligenti e una community che ti spinge a dare il massimo</p>
       </div>
       <div class="features-grid">
         <div class="feature-card">
@@ -61,8 +61,8 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
               <circle cx="12" cy="13" r="4"/>
             </svg>
           </div>
-          <h3>Coach AI</h3>
-          <p>L'intelligenza artificiale analizza ogni movimento e ti da feedback immediato per perfezionare la tecnica.</p>
+          <h3 data-i18n="home.feature1Title">Coach AI</h3>
+          <p data-i18n="home.feature1Desc">L'intelligenza artificiale analizza ogni movimento e ti da feedback immediato per perfezionare la tecnica.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -71,8 +71,8 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
               <polyline points="22,4 12,14.01 9,11.01"/>
             </svg>
           </div>
-          <h3>Forma perfetta</h3>
-          <p>Niente piu ripetizioni a meta. L'app valida ogni push-up e ti aiuta a costruire abitudini corrette.</p>
+          <h3 data-i18n="home.feature2Title">Forma perfetta</h3>
+          <p data-i18n="home.feature2Desc">Niente piu ripetizioni a meta. L'app valida ogni push-up e ti aiuta a costruire abitudini corrette.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -82,8 +82,8 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
               <line x1="6" y1="20" x2="6" y2="14"/>
             </svg>
           </div>
-          <h3>I tuoi progressi</h3>
-          <p>Guarda quanto sei migliorato. Statistiche chiare che ti mostrano il percorso dai primi push-up ai tuoi record.</p>
+          <h3 data-i18n="home.feature3Title">I tuoi progressi</h3>
+          <p data-i18n="home.feature3Desc">Guarda quanto sei migliorato. Statistiche chiare che ti mostrano il percorso dai primi push-up ai tuoi record.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -94,8 +94,8 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
               <line x1="3" y1="10" x2="21" y2="10"/>
             </svg>
           </div>
-          <h3>Programmi su misura</h3>
-          <p>Schede pronte o personalizzate. Che tu sia un principiante o un atleta, c'e un percorso per te.</p>
+          <h3 data-i18n="home.feature4Title">Programmi su misura</h3>
+          <p data-i18n="home.feature4Desc">Schede pronte o personalizzate. Che tu sia un principiante o un atleta, c'e un percorso per te.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -106,8 +106,8 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3>Community attiva</h3>
-          <p>Classifiche, sfide e compagni di allenamento. La motivazione giusta arriva dagli altri.</p>
+          <h3 data-i18n="home.feature5Title">Community attiva</h3>
+          <p data-i18n="home.feature5Desc">Classifiche, sfide e compagni di allenamento. La motivazione giusta arriva dagli altri.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -116,8 +116,8 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
               <polyline points="12,6 12,12 16,14"/>
             </svg>
           </div>
-          <h3>Qualita, non quantita</h3>
-          <p>Ogni ripetizione ha un punteggio. Impara a fare meno push-up, ma fatti meglio.</p>
+          <h3 data-i18n="home.feature6Title">Qualita, non quantita</h3>
+          <p data-i18n="home.feature6Desc">Ogni ripetizione ha un punteggio. Impara a fare meno push-up, ma fatti meglio.</p>
         </div>
       </div>
     </div>
@@ -127,26 +127,26 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   <section class="how-it-works">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Come Funziona</span>
-        <h2>Inizia in 30 secondi</h2>
+        <span class="section-tag" data-i18n="home.howItWorksTag">Come Funziona</span>
+        <h2 data-i18n="home.howItWorksTitle">Inizia in 30 secondi</h2>
       </div>
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Inquadra</h3>
-          <p>Posiziona il telefono e lascia che la fotocamera ti veda. Nessun sensore, nessun accessorio.</p>
+          <h3 data-i18n="home.step1Title">Inquadra</h3>
+          <p data-i18n="home.step1Desc">Posiziona il telefono e lascia che la fotocamera ti veda. Nessun sensore, nessun accessorio.</p>
         </div>
         <div class="step-line"></div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Allenati</h3>
-          <p>Segui il tuo programma o vai libero. L'AI conta, valuta e ti guida in tempo reale.</p>
+          <h3 data-i18n="home.step2Title">Allenati</h3>
+          <p data-i18n="home.step2Desc">Segui il tuo programma o vai libero. L'AI conta, valuta e ti guida in tempo reale.</p>
         </div>
         <div class="step-line"></div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Cresci</h3>
-          <p>Rivedi i tuoi progressi, scala le classifiche e sfida la community.</p>
+          <h3 data-i18n="home.step3Title">Cresci</h3>
+          <p data-i18n="home.step3Desc">Rivedi i tuoi progressi, scala le classifiche e sfida la community.</p>
         </div>
       </div>
     </div>
@@ -159,10 +159,10 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
         <!-- Brand Elements -->
         <img src={`${base}brandelement1.svg`} alt="" class="brand-element brand-el-cta-1" />
         <img src={`${base}brandelement2.svg`} alt="" class="brand-element brand-el-cta-2" />
-        <h2>Pronto a iniziare?</h2>
-        <p>Scarica Pusho gratis e scopri un nuovo modo di allenarti.</p>
+        <h2 data-i18n="home.ctaTitle">Pronto a iniziare?</h2>
+        <p data-i18n="home.ctaSubtitle">Scarica Pusho gratis e scopri un nuovo modo di allenarti.</p>
         <div class="cta-buttons">
-          <a href="#" class="btn btn-dark">Scarica gratis</a>
+          <a href="#" class="btn btn-dark" data-i18n="home.ctaButton">Scarica gratis</a>
         </div>
       </div>
     </div>
