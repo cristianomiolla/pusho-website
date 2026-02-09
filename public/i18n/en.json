@@ -6,7 +6,7 @@
     "terms": "Terms"
   },
   "footer": {
-    "tagline": "Your intelligent fitness tracker",
+    "tagline": "Your push-ups, measured and tracked",
     "support": "Support",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -14,9 +14,9 @@
   },
   "home": {
     "badge": "Powered by AI",
-    "title": "Your intelligent",
-    "titleHighlight": "fitness tracker",
-    "subtitle": "Pusho guides you through every workout and connects you with a community of motivated athletes like you.",
+    "title": "Your push-ups,",
+    "titleHighlight": "measured and tracked",
+    "subtitle": "Train push-ups without overthinking: Pusho counts, evaluates, and motivates you. You just need to go down and up.",
     "downloadOn": "Download on",
     "featuresTag": "Features",
     "featuresTitle": "Train better, together",
