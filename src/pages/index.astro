@@ -180,7 +180,7 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
         ttq.track('CompletePayment', {
           content_name: store === 'app_store' ? 'App Store Pre-registration' : 'Google Play Pre-registration',
           content_id: store,
-          value: 0,
+          value: 1,
           currency: 'EUR'
         });
       }
